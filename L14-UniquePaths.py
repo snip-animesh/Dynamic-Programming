@@ -28,9 +28,22 @@ def uniquePath(x=0,y=0):
     dp[x][y]=uniquePath(x+1,y)+uniquePath(x,y+1)
     return dp[x][y]
 
+# Here's the recursive approach I learnt from freecodecamp.org . It work's better .
+def gridTraveller(m,n,memo={}):
+    if (m,n) in memo:
+        return memo[(m,n)]
+    if m==1 and n==1:
+        return 1
+    if m==0 or n==0:
+        return 0
+    memo[(m,n)]=gridTraveller(m-1,n,memo)+gridTraveller(m,n-1,memo)
+    return memo[(m,n)]
+
+print(gridTraveller(18,18))
 
 dp=uniquePath()
 print(dp)
+
 
 # Logic from CodeNCode DP series L-14. 
 # Practice Problem https://leetcode.com/problems/unique-paths/   and  https://leetcode.com/problems/unique-paths-ii/
