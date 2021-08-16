@@ -28,3 +28,21 @@ for i in range(int(input())):
     print(stair(int(input())))
     
 #     This is efficient but gets memory error .. 
+
+
+# This code from CodeNCode 
+import sys
+sys.setrecursionlimit(100007)
+
+
+def fib(n,memo={}):
+    if n in memo:
+        return memo[n]
+    elif n<=2:
+        return 1
+    memo[n]=fib(n-1,memo)+fib(n-2,memo)
+    return memo[n]
+
+
+
+print(fib(1000))
