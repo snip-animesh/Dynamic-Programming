@@ -34,3 +34,33 @@ for _ in range(int(input())):
 # Time and Space Complexity O(N*M)
 # Best Explanation -https://www.youtube.com/watch?v=s6FhG--P7z0
 # Lecture 08 from CodeNCode.
+
+
+
+# Here's the code in from freecodecamp , implemented in recursive way .
+def canSum(target,numbers,memo=None):
+    if memo==None:
+        memo={}
+#In Python, when passing a mutable value as a default argument in a function, the default argument is mutated anytime that value is mutated.
+# My memo dictionary was being mutated every call. So I simply changed memo=None and added a check to see if it was the first call of the function.
+
+    if target in memo:
+        return memo[target]
+    if target==0:
+        return True
+    if target<0:
+        return False
+    for num in numbers:
+        remainder=target-num
+        if canSum(remainder,numbers,memo):
+            memo[target]=True
+            return True
+    memo[target]=False
+    return memo[target]
+
+
+print(canSum(7,[2,3]))
+print(canSum(7,[5,3,4,7]))
+print(canSum(7,[2,4]))
+print(canSum(8,[2,3,5]))
+print(canSum(3000,[7,14]))
