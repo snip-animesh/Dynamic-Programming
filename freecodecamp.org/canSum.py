@@ -21,3 +21,6 @@ print(canSum(7,[5,3,4,7]))
 print(canSum(7,[2,4]))
 print(canSum(8,[2,3,5]))
 print(canSum(3000,[7,14]))
+
+# time O(m*n) 
+# space O(m)
