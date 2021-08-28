@@ -18,3 +18,9 @@ if dp[amount]==10**8:
     print(-1)
 else:
     print(dp[amount])
+
+    
+# time O(m*n)
+# m=len(coins)
+# n=amount
+# space O(n)
