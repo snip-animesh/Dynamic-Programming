@@ -6,7 +6,7 @@ def canConstruct(target,wordBank,memo=None):
     if target=="":
         return True
     for word in wordBank:                                   # n iteration here
-        if target.startswith(word):                         # m iteration here
+        if target.startswith(word):                         # m iteration here for space and time both
             suffix=target[len(word):]                       # m iteration here                    
             if canConstruct(suffix,wordBank,memo):
                 memo[target]=True
@@ -24,4 +24,4 @@ print(canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeef",["e","ee","eee",
 # m=target.length
 # n=wordBank.length
 # time O(m^2*n)
-#space O(m)
+#space O(m^2)
