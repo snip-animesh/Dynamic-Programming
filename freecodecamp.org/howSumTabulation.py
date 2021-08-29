@@ -13,3 +13,10 @@ print(howSum(7,[5,3,4,7]))
 print(howSum(7,[2,4]))
 print(howSum(8,[2,3,5]))
 print(howSum(300,[7,14]))
+
+"""
+n=len(numbers)
+m=targetSum
+complexity time O(m^2*n)
+space(m^2)
+"""
