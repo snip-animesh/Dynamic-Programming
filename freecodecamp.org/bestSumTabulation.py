@@ -19,3 +19,11 @@ print(bestSum(7,[5,3,4,7]))
 print(bestSum(8,[2,3,5]))
 print(bestSum(8,[1,4,5]))
 print(bestSum(100,[25,1,2,5]))
+
+
+"""
+n=len(numbers)
+m=targetSum
+complexity time O(m^2*n)
+space(m^2)
+"""
