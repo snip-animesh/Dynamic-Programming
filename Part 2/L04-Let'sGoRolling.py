@@ -23,3 +23,6 @@ ans = lst[0][1]
 if n > 1:
     ans += getAns(1, 0)
 print(ans)
+
+
+# This get TLE
